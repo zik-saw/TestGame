@@ -25,7 +25,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			if(msg.message == WM_QUIT) break;
 			else
 			{
-				//здесь будет прорисовка и обработка нажатий на клаву с мышью. Внатуре
+				//здесь будет прорисовка и обработка нажатий на клаву с мышью
 			}
 		}
 
