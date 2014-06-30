@@ -1,8 +1,8 @@
 #include <windows.h>
 
 //формуруем функции по созданию окна
-bool GenerateWindow(HINSTANCE hInstance, int nCmdShow, LPCTSTR className, LPCTSTR windowTitle, int width, int height);
-bool GenerateWindow(HINSTANCE hInstance, int nCmdShow, LPCTSTR className, LPCTSTR windowTitle, int x, int y ,int width, int height);
+bool GenerateWindow(HINSTANCE hInstance, int nCmdShow, LPCSTR className, LPCSTR windowTitle, int width, int height);
+bool GenerateWindow(HINSTANCE hInstance, int nCmdShow, LPCSTR className, LPCSTR windowTitle, int x, int y ,int width, int height);
 
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT message, WPARAM wPARAM, LPARAM lParam);
 
@@ -35,17 +35,17 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	return 0;
 }
 
-bool GenerateWindow(HINSTANCE hInstance, int nCmdShow, LPCTSTR className, LPCTSTR windowTitle, int width, int height)
+bool GenerateWindow(HINSTANCE hInstance, int nCmdShow, LPCSTR className, LPCSTR windowTitle, int width, int height)
 {
 	return GenerateWindow(hInstance, nCmdShow, className, windowTitle, (GetSystemMetrics(SM_CXSCREEN) - width) / 2, 
 		(GetSystemMetrics(SM_CXSCREEN) - height)/2 , width, height);
 }
 
-bool GenerateWindow(HINSTANCE hInstance, int nCmdShow, LPCTSTR className , LPCTSTR windowTitle ,int x, int y, int width, int height)
+bool GenerateWindow(HINSTANCE hInstance, int nCmdShow, LPCSTR className , LPCSTR windowTitle ,int x, int y, int width, int height)
 {
 	HWND hWnd;
 
-	WNDCLASS wc;
+	
 	WNDCLASSEX wcex;
 
 	ZeroMemory(&wcex, sizeof(WNDCLASSEX));
