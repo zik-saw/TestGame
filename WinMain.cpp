@@ -13,7 +13,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	{
 		MSG msg;
 
-		while(true)
+		while(false)
 		{
 			while(PeekMessage(&msg, NULL, 0, 0, PM_REMOVE)) //проверяет есть ли в очереди сообщения и программа работает дальше(в отличиии от getMessage, которая ожидает пока не выолнися текущее событие(в духе синхронных и асинхронных процессов))
 			{//PM_REMOVE - Удалять сообщения из очереди
