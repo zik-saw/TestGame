@@ -13,7 +13,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	{
 		MSG msg;
 
-		while(false)
+		while(true)
 		{
 			while(PeekMessage(&msg, NULL, 0, 0, PM_REMOVE)) //проверяет есть ли в очереди сообщения и программа работает дальше(в отличиии от getMessage, которая ожидает пока не выолнися текущее событие(в духе синхронных и асинхронных процессов))
 			{//PM_REMOVE - Удалять сообщения из очереди
@@ -25,7 +25,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			if(msg.message == WM_QUIT) break;
 			else
 			{
-				//здесь будет прорисовка и обработка нажатий на клаву с мышью
+				//здесь будет прорисовка и обработка нажатий на клаву с мышью. Внатуре
 			}
 		}
 
